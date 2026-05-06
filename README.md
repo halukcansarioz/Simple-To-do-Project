@@ -1,124 +1,126 @@
+
 # ✅ Simple To-do Project
-### (Internet Computer Protocol (ICP) Üzerinde Motoko ile Yazılmış Görev Yönetim Uygulaması)
+### (A To-Do Management Application Written in Motoko on the Internet Computer Protocol)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Motoko](https://img.shields.io/badge/Motoko-FF6B00?style=flat&logo=dfinity&logoColor=white)](#)
 [![Internet Computer](https://img.shields.io/badge/Internet%20Computer-000000?style=flat&logo=dfinity&logoColor=white)](#)
 [![Made with Learning](https://img.shields.io/badge/Made%20with-Learning-1f425f.svg)](#)
 
-Bu repo, Internet Computer Protocol (ICP) ekosisteminde **Motoko** programlama dili kullanılarak geliştirilmiş basit bir görev yönetimi (to-do) uygulamasıdır. Merkeziyetsiz uygulama (dApp) geliştirme pratiği için hazırlanmıştır.
+This repository is a simple to-do management application developed using the **Motoko** programming language within the Internet Computer Protocol (ICP) ecosystem. It was created to practice decentralized application (dApp) development.
 
-## 📚 İçindekiler
-- [Proje Hakkında](#proje-hakkında)
-- [Özellikler](#özellikler)
-- [Teknoloji Yığını](#teknoloji-yığını)
-- [Kurulum ve Kullanım](#kurulum-ve-kullanım)
-- [Proje Yapısı](#proje-yapısı)
-- [Katkıda Bulunma](#katkıda-bulunma)
-- [İletişim](#iletisim)
-- [Lisans](#lisans)
-
----
-
-## Proje Hakkında
-Ankara Üniversitesi Bilgisayar Mühendisliği'nden mezun olduktan sonra kendimi geliştirme sürecimin bir parçası olan bu proje; Internet Computer Protocol (ICP) üzerinde çalışan merkeziyetsiz bir görev yönetimi uygulamasıdır. Motoko dili ile yazılmış olup, blockchain tabanlı uygulama geliştirme becerilerini pekiştirmek amacıyla oluşturulmuştur.
-
-* **Geliştirici:** Haluk Can SARIÖZ
-* **Tür:** Merkeziyetsiz Uygulama (dApp)
-* **Platform:** Internet Computer Protocol (ICP)
-* **Amaç:** Motoko ve ICP ekosistemini uygulamalı olarak öğrenmek
+## 📚 Table of Contents
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation & Usage](#installation--usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [Contact](#contact)
+- [License](#license)
 
 ---
 
-## Özellikler
-* **Görev Ekleme:** Yeni yapılacak işleri listeye hızlıca ekleyebilme.
-* **Görev Tamamlama:** Tamamlanan görevleri işaretleme veya üzerini çizme.
-* **Görev Silme:** İstenmeyen veya bitmiş görevleri listeden kaldırma.
-* **Merkeziyetsiz Yapı:** ICP altyapısında çalışan akıllı sözleşme (canister) mimarisi.
+## About the Project
+As part of my continuous self-improvement journey after graduating from Ankara University Computer Engineering, this project is a decentralized task management application running on the Internet Computer Protocol (ICP). Written in Motoko, it was created to reinforce blockchain-based application development skills.
+
+- **Developer:** Haluk Can SARIÖZ
+- **Type:** Decentralized Application (dApp)
+- **Platform:** Internet Computer Protocol (ICP)
+- **Purpose:** Hands-on learning of Motoko and the ICP ecosystem
 
 ---
 
-## Teknoloji Yığını
+## Features
+- **Add Tasks** – Quickly add new to-do items to the list.
+- **Complete Tasks** – Mark completed tasks or cross them off.
+- **Delete Tasks** – Remove unwanted or finished tasks from the list.
+- **Decentralized Architecture** – Smart contract (canister) architecture running on ICP infrastructure.
 
-| Katman | Teknoloji |
-|--------|-----------|
-| **Programlama Dili** | Motoko |
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|:-------|:-----------|
+| **Programming Language** | Motoko |
 | **Platform** | Internet Computer Protocol (ICP) |
-| **Geliştirme Ortamı** | DFX SDK |
-| **Versiyon Kontrol** | Git & GitHub |
+| **Development Environment** | DFX SDK |
+| **Version Control** | Git & GitHub |
 
 ---
 
-## Kurulum ve Kullanım
+## Installation & Usage
 
-### Ön Gereksinimler
-Projeyi yerel makinenizde çalıştırmak için aşağıdaki araçların kurulu olduğundan emin olun:
-* [DFX SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-* [Node.js](https://nodejs.org/) (ICP geliştirme ortamı için)
-* Git
+### Prerequisites
+Make sure the following tools are installed on your local machine:
+- [DFX SDK](https://internetcomputer.org/docs/current/developer-docs/setup/install)
+- [Node.js](https://nodejs.org/) (for the ICP development environment)
+- Git
 
-### Kurulum Adımları
+### Installation Steps
 
-**1. Depoyu klonlayın:**
+**1. Clone the repository:**
 ```bash
 git clone https://github.com/halukcansarioz/Simple-To-do-Project.git
 ```
 
-**2. Proje dizinine gidin:**
+**2. Navigate to the project directory:**
 ```bash
 cd Simple-To-do-Project
 ```
 
-**3. ICP yerel ağını başlatın:**
+**3. Start the ICP local network:**
 ```bash
 dfx start --background
 ```
 
-**4. Canister'ı derleyin ve dağıtın:**
+**4. Compile and deploy the canister:**
 ```bash
 dfx deploy
 ```
 
-**5. Uygulamaya erişin:**
-Dağıtım tamamlandıktan sonra terminalde görüntülenen yerel adresten (genellikle `http://127.0.0.1:4943`) uygulamaya erişebilirsiniz.
+**5. Access the application:**
+After deployment is complete, access the application at the local address displayed in the terminal (usually `http://127.0.0.1:4943`).
 
 ---
 
-## Proje Yapısı
+## Project Structure
 ```text
 Simple-To-do-Project/
-├── Main.mo            # Motoko akıllı sözleşmesi (ana uygulama mantığı)
-├── README.md          # Proje dökümantasyonu
-└── .gitattributes     # Git yapılandırma dosyası
+├── Main.mo            # Motoko smart contract (main application logic)
+├── README.md          # Project documentation
+└── .gitattributes     # Git configuration file
 ```
 
-> ℹ️ **Not:** Bu proje, Internet Computer Protocol (ICP) üzerinde çalışan bir akıllı sözleşme (canister) olarak tasarlanmıştır. Kullanıcı arayüzü, ICP'nin sunduğu Candid arayüzü veya ayrı bir frontend canister'ı aracılığıyla sağlanabilir.
+> ℹ️ **Note:** This project is designed as a smart contract (canister) running on the Internet Computer Protocol (ICP). The user interface can be provided via ICP's Candid interface or a separate frontend canister.
 
 ---
 
-## Katkıda Bulunma
-Katkılarınız, hata bildirimleriniz ve özellik istekleriniz memnuniyetle karşılanır!
+## Contributing
+Contributions, bug reports, and feature requests are welcome!
 
-1. Bu depoyu **Fork**'layın.
-2. Bir **Branch** oluşturun (`git checkout -b feature/YeniOzellik`).
-3. Değişikliklerinizi **Commit** edin (`git commit -m 'Ekleme: Yeni özellik'`).
-4. Kodlarınızı **Push**'layın (`git push origin feature/YeniOzellik`).
-5. Bir **Pull Request** açın.
+1. **Fork** this repository.
+2. Create a **Branch** (`git checkout -b feature/NewFeature`).
+3. Make your changes and **Commit** (`git commit -m 'Add: New feature'`).
+4. **Push** your code (`git push origin feature/NewFeature`).
+5. Open a **Pull Request**.
 
 ---
 
-<a name="iletisim"></a>
-## İletişim
+<a name="contact"></a>
+## Contact
 **Haluk Can Sarıöz**
+
 - GitHub: [@halukcansarioz](https://github.com/halukcansarioz)
-- E-posta: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
+- Email: [halukcansarioz19@gmail.com](mailto:halukcansarioz19@gmail.com)
 - LinkedIn: [Haluk Can Sarıöz](https://www.linkedin.com/in/halukcansarioz)
 
 ---
 
-*Bu dApp projesini faydalı bulduysanız ⭐ vermeyi unutmayın!*
+*If you found this dApp project helpful, don't forget to ⭐ it!*
 
 ---
 
-## Lisans
-Bu proje [MIT Lisansı](LICENSE) ile lisanslanmıştır.
+## License
+This project is licensed under the [MIT License](LICENSE).
